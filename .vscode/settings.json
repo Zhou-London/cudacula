@@ -2,4 +2,6 @@
   "files.associations": {
     "iostream": "cpp"
   },
+
+  "cmake.generator": "Ninja"
 }

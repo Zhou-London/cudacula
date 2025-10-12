@@ -10,7 +10,5 @@ CompileFlags:
     - cuda
     - -std=c++20
 
-    # Others
-    - -Wall
-    - -Wno-unknown-pragmas
-    - -Wno-unused-parameter
+Diagnostics:
+  Suppress: ["*"]
