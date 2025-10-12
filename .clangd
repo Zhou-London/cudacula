@@ -1,0 +1,16 @@
+CompileFlags:
+  Add:
+    # Configure CUDA
+    - --cuda-path=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0
+    - --cuda-gpu-arch=sm_120
+    - -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\include"
+
+    # Languages
+    - -x
+    - cuda
+    - -std=c++20
+
+    # Others
+    - -Wall
+    - -Wno-unknown-pragmas
+    - -Wno-unused-parameter
