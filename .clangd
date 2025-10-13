@@ -8,6 +8,8 @@ CompileFlags:
       "-Xcompiler= /EHsc",
       "-Xcompiler= -Zi -Ob0 -Od /RTC1",
       "-Xcompiler=-MDd",
+      "-Xcompiler=-MD",
+      "-Xcompiler=-O2 -Ob2",
       "-Xcompiler=-FdCMakeFiles\\cudacula.dir\\,-FS",
       "--generate-code=.*",
       "--generate-code=arch=compute_120,code=[compute_120,sm_120]",
