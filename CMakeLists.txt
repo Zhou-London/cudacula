@@ -9,10 +9,19 @@ set(CMAKE_CUDA_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(CMAKE_CUDA_ARCHITECTURES 120)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS OFF)
 
 add_executable(cudacula
     src/main.cu
+)
+
+target_include_directories(cudacula PRIVATE
+    src
+    src/practices
+)
+
+target_sources(cudacula PRIVATE
+    src/practices/add_vector.cu
 )
 
 set_target_properties(cudacula PROPERTIES
