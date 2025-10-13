@@ -1,6 +1,18 @@
 # NOT Working well with stable Clangd.
 
 CompileFlags:
+  Remove:
+    [
+      "-forward-unknown-to-host-compiler",
+      "-Xcompiler=.*",
+      "-Xcompiler= /EHsc",
+      "-Xcompiler= -Zi -Ob0 -Od /RTC1",
+      "-Xcompiler=-MDd",
+      "-Xcompiler=-FdCMakeFiles\\cudacula.dir\\,-FS",
+      "--generate-code=.*",
+      "--generate-code=arch=compute_120,code=[compute_120,sm_120]",
+      "-rdc=true",
+    ]
   Add:
     # Configure CUDA
     - --cuda-path=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0
