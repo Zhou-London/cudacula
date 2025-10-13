@@ -1,14 +1,14 @@
+# NOT Working well with stable Clangd.
+
 CompileFlags:
   Add:
     # Configure CUDA
     - --cuda-path=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0
     - --cuda-gpu-arch=sm_120
     - -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\include"
+    - -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\lib"
 
     # Languages
     - -x
     - cuda
     - -std=c++20
-
-Diagnostics:
-  Suppress: ["*"]
