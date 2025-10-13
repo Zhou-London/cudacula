@@ -15,7 +15,7 @@ int main() {
     float* h_B = new float[N];
     float* h_C = new float[N];
 
-    for (int i : std::ranges::views::iota(0, N)) {
+    for (const auto& i : std::ranges::views::iota(0, N)) {
         h_A[i] = i * 1.0f;
         h_B[i] = (N - i) * 1.0f;
     }
