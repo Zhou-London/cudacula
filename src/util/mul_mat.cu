@@ -1,5 +1,5 @@
-
 #include <iostream>
+#include "mul_mat.h"
 
 #define TILE_SIZE 16
 
@@ -36,7 +36,7 @@ __global__ void matMulTiled(float* A, float* B, float* C, int M, int N, int K) {
     if (row < M && col < N) C[row * N + col] = sum;
 }
 
-int main() {
+void Practices::mul_mat() {
     int M = 64, N = 64, K = 64;
     size_t sizeA = M * K * sizeof(float);
     size_t sizeB = K * N * sizeof(float);
@@ -75,8 +75,4 @@ int main() {
     delete[] h_A;
     delete[] h_B;
     delete[] h_C;
-
-    return 0;
-
-    return 0;
 }
