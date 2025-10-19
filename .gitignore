@@ -9,3 +9,5 @@
 # Build & Cache
 build
 .cache
+*.exe
+*.ncu-rep
