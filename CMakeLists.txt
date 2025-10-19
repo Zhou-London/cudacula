@@ -11,7 +11,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CUDA_ARCHITECTURES 120)
 
 add_executable(cudacula
-    src/main.cu
+    src/main.cc
 )
 
 target_include_directories(cudacula PRIVATE
@@ -20,7 +20,8 @@ target_include_directories(cudacula PRIVATE
 )
 
 target_sources(cudacula PRIVATE
-    src/practices/add_vector.cu
+    src/util/add_vector.cu
+    src/util/mul_mat.cu
 )
 
 set_target_properties(cudacula PROPERTIES
