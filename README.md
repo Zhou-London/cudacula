@@ -1,3 +1,3 @@
 # cudacula
 
-CUDA tutorial.
+CUDA monte-carlo option pricer.
