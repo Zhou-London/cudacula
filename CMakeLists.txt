@@ -16,14 +16,16 @@ add_executable(cudacula
 
 target_include_directories(cudacula PRIVATE
     src
-    src/util
+    src/tests
     src/markets
 )
 
 target_sources(cudacula PRIVATE
-    src/util/add_vector.cu
-    src/util/mul_mat.cu
-    src/util/square_sum.cu
+
+    # Tests
+    src/tests/add_vector.cu
+    src/tests/mul_mat.cu
+    src/tests/square_sum.cu
 )
 
 set_target_properties(cudacula PROPERTIES
