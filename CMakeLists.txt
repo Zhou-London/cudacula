@@ -22,6 +22,7 @@ target_include_directories(cudacula PRIVATE
 target_sources(cudacula PRIVATE
     src/util/add_vector.cu
     src/util/mul_mat.cu
+    src/util/square_sum.cu
 )
 
 set_target_properties(cudacula PROPERTIES
