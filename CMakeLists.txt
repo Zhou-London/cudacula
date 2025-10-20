@@ -11,7 +11,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CUDA_ARCHITECTURES 120)
 
 add_executable(cudacula
-    src/main.cc
+    src/main.cu
 )
 
 target_include_directories(cudacula PRIVATE
@@ -28,4 +28,8 @@ target_sources(cudacula PRIVATE
 set_target_properties(cudacula PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
     CUDA_RESOLVE_DEVICE_SYMBOLS ON
+)
+
+target_compile_definitions(cudacula PRIVATE
+    NOMINMAX
 )
