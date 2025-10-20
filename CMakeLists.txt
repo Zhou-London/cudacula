@@ -16,7 +16,8 @@ add_executable(cudacula
 
 target_include_directories(cudacula PRIVATE
     src
-    src/practices
+    src/util
+    src/markets
 )
 
 target_sources(cudacula PRIVATE
